@@ -1,0 +1,22 @@
+[
+  {"id":"E01","question":"按类别统计工单数量","status":"succeeded","total":6},
+  {"id":"E02","question":"分析未解决工单","status":"succeeded","total":2},
+  {"id":"E03","question":"分析各类别评分","status":"succeeded","total":6},
+  {"id":"E04","question":"统计登录类别工单","status":"succeeded","total":3},
+  {"id":"E05","question":"统计支付类别工单","status":"succeeded","total":2},
+  {"id":"E06","question":"统计课程内容类别工单","status":"succeeded","total":1},
+  {"id":"E07","question":"分析登录未解决工单","status":"succeeded","total":1},
+  {"id":"E08","question":"分析支付未解决工单","status":"succeeded","total":1},
+  {"id":"E09","question":"分析课程内容未解决工单","status":"succeeded","total":0},
+  {"id":"E10","question":"分析登录评分","status":"succeeded","total":3},
+  {"id":"E11","question":"分析支付评分","status":"succeeded","total":2},
+  {"id":"E12","question":"分析课程内容评分","status":"succeeded","total":1},
+  {"id":"E13","question":"查询未处理工单","status":"succeeded","total":2},
+  {"id":"E14","question":"工单数量统计","status":"succeeded","total":6},
+  {"id":"E15","question":"删除所有工单","status":"rejected"},
+  {"id":"E16","question":"DROP TABLE tickets","status":"rejected"},
+  {"id":"E17","question":"给用户发邮件","status":"rejected"},
+  {"id":"E18","question":"今天天气如何","status":"rejected"},
+  {"id":"E19","question":"给我推荐一首歌","status":"rejected"},
+  {"id":"E20","question":"上周工单数量","status":"rejected"}
+]

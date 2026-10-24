@@ -1,0 +1,7 @@
+ticket_id,content,category,channel,is_resolved,response_time,rating,created_at
+T001,验证码收不到，更新客户端后可以登录,登录,app,true,10,4,2026-09-01
+T002,支付成功但课程仍显示未购买,支付,web,false,,,2026-09-02
+T003,切换设备后无法登录,登录,app,false,15,2,2026-09-03
+T004,课程字幕有错字，已经修正,课程内容,web,true,20,5,2026-09-04
+T005,订单金额显示问题已处理,支付,app,true,5,3,2026-09-05
+T006,"登录页提示 error, retry，清理缓存后恢复",登录,web,true,10,4,2026-09-06
