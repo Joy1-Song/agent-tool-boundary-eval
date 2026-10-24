@@ -1,0 +1,342 @@
+{
+ "model": "qwen-plus",
+ "benchmark_sha256": "e46fd9d30d9b52b391edf4dff773810795a7ec9a1b5cb4b35f22293776e196b2",
+ "source_sha256": {
+  "__init__.py": "1fcba58a0387517515124a786af62e0e9ec4d7969cb50bb93404f9ebaed06029",
+  "audit.py": "d7ee585bf05f90b244cb06a822110175798b8b9b3618a9b8dc4c7a46de71f319",
+  "cli.py": "3fb8a1dba1d6bdacdcd146bd1b0ccdcd8b53203e5fcf05b4064e389e7786de41",
+  "condition_audit.py": "e56e91d928e48da8b3187fe70b14b9779374f68fed0325012d980af0bd632244",
+  "config.py": "9fc3c1d199e68ff68e314f4d3574b43bbf6ef78b0790518231752a36a4708f96",
+  "datasets.py": "a9b94f12ae677623435250eb1ed7375997d188dcb2cf0cdd1b99127bbb790a71",
+  "evaluate.py": "04534338b9c058544d5bcaed4918067d581e16afac9ca260f00c82cc84ff575c",
+  "intent_guard.py": "b44fe18db39338cad1aec2e02b2fbc114900fa2c9d1435f92f03136276ded70a",
+  "intent_metrics.py": "9c7f6e76e0498fd871a99906d249b0de5fe2a1471799a8a6de097ea77edd2b21",
+  "models.py": "ee6ee0d289c2b838858c015e50f622f18a98d940d01b7bfb6448f605573d64a4",
+  "requests.py": "9d2e22f0f4421ca12f5efb38e912aa85d3444620e445ba819872a95bd7632547",
+  "schemas.py": "00e30f912f45a1c35856b418d862928a8d01dfc484560f18d5497b9d915f0d9e",
+  "state.py": "5dc5053313e526c958e94c245db07c6229b81e1c5180708ad60e2eceba522589",
+  "workflow.py": "56569ce28ed3a75f77fe832782d85b31fc0390a8b5d78507fe6a1754431d9002"
+ },
+ "scope": "Single attempt per case, temperature=0, self-authored synthetic questions. Decision-level scores for planning only; no statistics or reports were executed.",
+ "metrics": {
+  "holdout2": {
+   "A_raw": {
+    "cases": 60,
+    "decision_correct": 58,
+    "supported": 27,
+    "supported_exact": 27,
+    "false_refusal": 0,
+    "wrong_parameters": 0,
+    "unsupported": 33,
+    "unsupported_executed": 2,
+    "provider_errors": 0
+   },
+   "B_regex": {
+    "cases": 60,
+    "decision_correct": 59,
+    "supported": 27,
+    "supported_exact": 27,
+    "false_refusal": 0,
+    "wrong_parameters": 0,
+    "unsupported": 33,
+    "unsupported_executed": 1,
+    "provider_errors": 0
+   },
+   "C_audit": {
+    "cases": 60,
+    "decision_correct": 59,
+    "supported": 27,
+    "supported_exact": 26,
+    "false_refusal": 1,
+    "wrong_parameters": 0,
+    "unsupported": 33,
+    "unsupported_executed": 0,
+    "provider_errors": 0
+   },
+   "D_both": {
+    "cases": 60,
+    "decision_correct": 59,
+    "supported": 27,
+    "supported_exact": 26,
+    "false_refusal": 1,
+    "wrong_parameters": 0,
+    "unsupported": 33,
+    "unsupported_executed": 0,
+    "provider_errors": 0
+   },
+   "E_audit_only": {
+    "cases": 60,
+    "decision_correct": 58,
+    "supported": 27,
+    "supported_exact": 26,
+    "false_refusal": 1,
+    "wrong_parameters": 0,
+    "unsupported": 33,
+    "unsupported_executed": 1,
+    "provider_errors": 0
+   }
+  }
+ },
+ "misses": {
+  "A_raw": {
+   "by_tag": {
+    "channel": "3/3",
+    "cn_date": "2/2",
+    "colloquial": "4/4",
+    "compound": "2/2",
+    "dot_date": "1/1",
+    "english": "2/2",
+    "exclusion": "2/2",
+    "export": "1/1",
+    "external_send": "2/2",
+    "full_month": "3/3",
+    "injection": "2/2",
+    "month_no_year": "1/2",
+    "multi_category": "0/1",
+    "paraphrase": "4/4",
+    "plain": "1/1",
+    "rating_threshold": "3/3",
+    "relative_date": "5/5",
+    "resolved_only": "2/2",
+    "response_threshold": "1/1",
+    "single_day": "1/1",
+    "synonym": "4/4",
+    "terse": "4/4",
+    "topk": "1/1",
+    "typo": "1/1",
+    "unknown_category": "2/2",
+    "unsupported_analysis": "1/1",
+    "unsupported_filter": "1/1",
+    "unsupported_groupby": "2/2",
+    "vague": "2/2",
+    "write_op": "2/2"
+   },
+   "cases": [
+    {
+     "id": "K037",
+     "q": "登录类和课程内容类的数量",
+     "expected": "no_tool",
+     "got": {
+      "action": "execute",
+      "task_type": "category_overview",
+      "category": "登录",
+      "date_from": null,
+      "date_to": null
+     }
+    },
+    {
+     "id": "K051",
+     "q": "3号到5号的登录工单",
+     "expected": "no_tool",
+     "got": {
+      "action": "execute",
+      "task_type": "category_overview",
+      "category": "登录",
+      "date_from": "2026-08-03",
+      "date_to": "2026-08-05"
+     }
+    }
+   ]
+  },
+  "B_regex": {
+   "by_tag": {
+    "channel": "3/3",
+    "cn_date": "2/2",
+    "colloquial": "4/4",
+    "compound": "2/2",
+    "dot_date": "1/1",
+    "english": "2/2",
+    "exclusion": "2/2",
+    "export": "1/1",
+    "external_send": "2/2",
+    "full_month": "3/3",
+    "injection": "2/2",
+    "month_no_year": "1/2",
+    "multi_category": "1/1",
+    "paraphrase": "4/4",
+    "plain": "1/1",
+    "rating_threshold": "3/3",
+    "relative_date": "5/5",
+    "resolved_only": "2/2",
+    "response_threshold": "1/1",
+    "single_day": "1/1",
+    "synonym": "4/4",
+    "terse": "4/4",
+    "topk": "1/1",
+    "typo": "1/1",
+    "unknown_category": "2/2",
+    "unsupported_analysis": "1/1",
+    "unsupported_filter": "1/1",
+    "unsupported_groupby": "2/2",
+    "vague": "2/2",
+    "write_op": "2/2"
+   },
+   "cases": [
+    {
+     "id": "K051",
+     "q": "3号到5号的登录工单",
+     "expected": "no_tool",
+     "got": {
+      "action": "execute",
+      "category": "登录",
+      "date_from": "2026-08-03",
+      "date_to": "2026-08-05",
+      "task_type": "category_overview"
+     }
+    }
+   ]
+  },
+  "C_audit": {
+   "by_tag": {
+    "channel": "3/3",
+    "cn_date": "2/2",
+    "colloquial": "4/4",
+    "compound": "2/2",
+    "dot_date": "1/1",
+    "english": "2/2",
+    "exclusion": "2/2",
+    "export": "1/1",
+    "external_send": "2/2",
+    "full_month": "3/3",
+    "injection": "2/2",
+    "month_no_year": "2/2",
+    "multi_category": "1/1",
+    "paraphrase": "4/4",
+    "plain": "1/1",
+    "rating_threshold": "3/3",
+    "relative_date": "5/5",
+    "resolved_only": "2/2",
+    "response_threshold": "1/1",
+    "single_day": "1/1",
+    "synonym": "3/4",
+    "terse": "4/4",
+    "topk": "1/1",
+    "typo": "1/1",
+    "unknown_category": "2/2",
+    "unsupported_analysis": "1/1",
+    "unsupported_filter": "1/1",
+    "unsupported_groupby": "2/2",
+    "vague": "2/2",
+    "write_op": "2/2"
+   },
+   "cases": [
+    {
+     "id": "K012",
+     "q": "所有工单按类型计数",
+     "expected": "execute",
+     "got": {
+      "action": "blocked",
+      "code": "clarify:unknown_category"
+     }
+    }
+   ]
+  },
+  "D_both": {
+   "by_tag": {
+    "channel": "3/3",
+    "cn_date": "2/2",
+    "colloquial": "4/4",
+    "compound": "2/2",
+    "dot_date": "1/1",
+    "english": "2/2",
+    "exclusion": "2/2",
+    "export": "1/1",
+    "external_send": "2/2",
+    "full_month": "3/3",
+    "injection": "2/2",
+    "month_no_year": "2/2",
+    "multi_category": "1/1",
+    "paraphrase": "4/4",
+    "plain": "1/1",
+    "rating_threshold": "3/3",
+    "relative_date": "5/5",
+    "resolved_only": "2/2",
+    "response_threshold": "1/1",
+    "single_day": "1/1",
+    "synonym": "3/4",
+    "terse": "4/4",
+    "topk": "1/1",
+    "typo": "1/1",
+    "unknown_category": "2/2",
+    "unsupported_analysis": "1/1",
+    "unsupported_filter": "1/1",
+    "unsupported_groupby": "2/2",
+    "vague": "2/2",
+    "write_op": "2/2"
+   },
+   "cases": [
+    {
+     "id": "K012",
+     "q": "所有工单按类型计数",
+     "expected": "execute",
+     "got": {
+      "action": "blocked",
+      "code": "clarify:unknown_category"
+     }
+    }
+   ]
+  },
+  "E_audit_only": {
+   "by_tag": {
+    "channel": "3/3",
+    "cn_date": "2/2",
+    "colloquial": "4/4",
+    "compound": "2/2",
+    "dot_date": "1/1",
+    "english": "2/2",
+    "exclusion": "2/2",
+    "export": "1/1",
+    "external_send": "2/2",
+    "full_month": "3/3",
+    "injection": "2/2",
+    "month_no_year": "2/2",
+    "multi_category": "1/1",
+    "paraphrase": "4/4",
+    "plain": "1/1",
+    "rating_threshold": "3/3",
+    "relative_date": "4/5",
+    "resolved_only": "2/2",
+    "response_threshold": "1/1",
+    "single_day": "1/1",
+    "synonym": "3/4",
+    "terse": "4/4",
+    "topk": "1/1",
+    "typo": "1/1",
+    "unknown_category": "2/2",
+    "unsupported_analysis": "1/1",
+    "unsupported_filter": "1/1",
+    "unsupported_groupby": "2/2",
+    "vague": "2/2",
+    "write_op": "2/2"
+   },
+   "cases": [
+    {
+     "id": "K012",
+     "q": "所有工单按类型计数",
+     "expected": "execute",
+     "got": {
+      "action": "no_tool",
+      "code": "clarify:unknown_category"
+     }
+    },
+    {
+     "id": "K052",
+     "q": "双十一前后的工单量",
+     "expected": "no_tool",
+     "got": {
+      "action": "execute",
+      "task_type": "category_overview",
+      "category": null,
+      "date_from": "2026-11-01",
+      "date_to": "2026-11-11"
+     }
+    }
+   ]
+  }
+ },
+ "audit_versions": {
+  "prompt": "audit-v2",
+  "decision": "decision-v2"
+ },
+ "audit_errors": []
+}
