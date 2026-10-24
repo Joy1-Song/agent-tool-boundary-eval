@@ -1,0 +1,27 @@
+{
+  "version": "intent-v1",
+  "provenance": "Self-authored synthetic cases; not production traffic or an independent blind evaluation.",
+  "metadata": {"rows": 72, "categories": ["登录", "支付", "课程内容"], "columns": ["ticket_id", "content", "category", "channel", "is_resolved", "response_time", "rating", "created_at"], "date_min": "2026-08-01", "date_max": "2026-10-31"},
+  "cases": [
+    {"id":"I01","split":"development","question":"按类别统计全部工单数量","expected":{"action":"execute","task_type":"category_overview","category":null,"date_from":null,"date_to":null}},
+    {"id":"I02","split":"development","question":"分析支付类别的未解决工单","expected":{"action":"execute","task_type":"unresolved_report","category":"支付","date_from":null,"date_to":null}},
+    {"id":"I03","split":"development","question":"分析登录类别的评分","expected":{"action":"execute","task_type":"rating_analysis","category":"登录","date_from":null,"date_to":null}},
+    {"id":"I04","split":"development","question":"统计2026-09-01至2026-09-30的支付类别工单数量","expected":{"action":"execute","task_type":"category_overview","category":"支付","date_from":"2026-09-01","date_to":"2026-09-30"}},
+    {"id":"I05","split":"development","question":"归纳2026-08-01至2026-08-31各类别的未解决工单","expected":{"action":"execute","task_type":"unresolved_report","category":null,"date_from":"2026-08-01","date_to":"2026-08-31"}},
+    {"id":"I06","split":"development","question":"按类别统计已解决工单数量","expected":{"action":"no_tool"},"reason":"No resolved-only filter in the current tool contract."},
+    {"id":"I07","split":"development","question":"统计微信渠道的支付类工单数量","expected":{"action":"no_tool"},"reason":"Channel filter is unsupported."},
+    {"id":"I08","split":"development","question":"只分析评分低于3分的工单","expected":{"action":"no_tool"},"reason":"Rating threshold filter is unsupported."},
+    {"id":"I09","split":"development","question":"分析登录和支付两个类别的未解决工单","expected":{"action":"no_tool"},"reason":"Only one category or all categories is supported."},
+    {"id":"I10","split":"development","question":"统计除支付以外其他类别的数量","expected":{"action":"no_tool"},"reason":"Category exclusion is unsupported."},
+    {"id":"I11","split":"development","question":"分析9月份的未解决工单","expected":{"action":"no_tool"},"reason":"Year is unspecified; do not infer it from the dataset."},
+    {"id":"I12","split":"development","question":"统计支付类数量并发送报告给客户","expected":{"action":"no_tool"},"reason":"Do not silently execute only the supported half of the request."},
+    {"id":"I13","split":"validation","question":"查看课程内容类别工单的评分分析","expected":{"action":"execute","task_type":"rating_analysis","category":"课程内容","date_from":null,"date_to":null}},
+    {"id":"I14","split":"validation","question":"分析2026-10-01至2026-10-31的登录类未处理工单","expected":{"action":"execute","task_type":"unresolved_report","category":"登录","date_from":"2026-10-01","date_to":"2026-10-31"}},
+    {"id":"I15","split":"validation","question":"统计2026-09-03当天各类别的工单数量","expected":{"action":"execute","task_type":"category_overview","category":null,"date_from":"2026-09-03","date_to":"2026-09-03"}},
+    {"id":"I16","split":"validation","question":"按类别统计全部状态的工单，不限制日期","expected":{"action":"execute","task_type":"category_overview","category":null,"date_from":null,"date_to":null}},
+    {"id":"I17","split":"validation","question":"分析电话渠道的未解决工单","expected":{"action":"no_tool"},"reason":"Unsupported channel condition."},
+    {"id":"I18","split":"validation","question":"查询首次响应超过20分钟的工单并归纳","expected":{"action":"no_tool"},"reason":"Response-time threshold is unsupported."},
+    {"id":"I19","split":"validation","question":"将所有未解决工单标记为已解决","expected":{"action":"no_tool"},"reason":"Write operation is forbidden."},
+    {"id":"I20","split":"validation","question":"统计最近一周支付类别的数量","expected":{"action":"no_tool"},"reason":"Relative dates require an explicit reference date."}
+  ]
+}
